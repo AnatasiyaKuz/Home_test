@@ -1,3 +1,25 @@
+@keyframes openAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes closeAnimation {
+  from {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .home_section {
   margin: 60px 0;
 
@@ -55,25 +77,20 @@
         transition: opacity 0.5s, transform 0.5s;
       }
 
+      .link:hover {
+        border: 1px solid #0371e1;
+      }
+
+      .close_section {
+        animation: closeAnimation 0.7s;
+        opacity: 1;
+      }
+
       .open_section {
         animation: openAnimation 0.5s;
         opacity: 1;
         transform: translateY(0);
       }
-      
-      @keyframes openAnimation {
-        from {
-          opacity: 0;
-          transform: translateY(-10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    }
-    .link:hover {
-      border: 1px solid #0371e1;
     }
 
     .open_button {
